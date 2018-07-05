@@ -12,9 +12,9 @@
   <link rel="stylesheet" type="text/css" href="{% static 'listing/css/homestyles.css' %}">
 
   <!-- Javascripts -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="vendor/bootstrap-4.1.1/js/bootstrap.min.js"></script>
+  <script src="{% static 'listing/js/jquery.min.js' %}"></script>
+  <script src="{% static 'listing/js/popper.min.js' %}"></script>
+  <script src="{% static 'listing/vendor/bootstrap-4.1.1/js/bootstrap.min.js' %}"></script>
 
 </head>
 
@@ -23,7 +23,7 @@
 
 <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
   <!-- One of the primary actions on mobile is to call a business - This displays a phone button on mobile only -->
-  <a class="navbar-brand" href="index.html"><img src="{% static 'listings/images/logo.png' %}"></a>
+  <a class="navbar-brand" href="#"><img src="{% static 'listings/images/logo.png' %}"></a>
   <div class="navbar-toggler-right">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -43,7 +43,7 @@
                         <a class="nav-link font-weight-bold" href="#">SIGN UP</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link font-weight-bold" href="login.html">LOGIN</a>
+                        <a class="nav-link font-weight-bold" href="#">LOGIN</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white bg-success font-weight-bold" href="#">HOW IT WORKS</a>
