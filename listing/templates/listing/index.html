@@ -1,0 +1,267 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>locateme | find skilled people easily</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="{% static 'listing/vendor/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'listing/vendor/bootstrap-4.1.1/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'listing/css/homestyles.css' %}">
+
+  <!-- Javascripts -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="vendor/bootstrap-4.1.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <!--- Start of header-->
+
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+  <!-- One of the primary actions on mobile is to call a business - This displays a phone button on mobile only -->
+  <a class="navbar-brand" href="index.html"><img src="{% static 'listings/images/logo.png' %}"></a>
+  <div class="navbar-toggler-right">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+  <div class="collapse navbar-collapse flex-column " id="navbar">
+                <ul class="navbar-nav ml-auto" id="rightnav">
+                    <li> <form class="form-inline" id="cs">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="search for a skill" aria-label="search for a skill" aria-describedby="basic-addon1"><div class="input-group-prepend">
+                        <span class="input-group-text"><button id="search-s"><i class="fa fa-search"></i></button></span>
+                        </div>
+                    </div>
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="#">SIGN UP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="login.html">LOGIN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white bg-success font-weight-bold" href="#">HOW IT WORKS</a>
+                    </li>
+                </ul>
+
+    <ul class="navbar-nav justify-content-center w-100 bg-secondary px-3">
+      <li class="nav-item">
+        <a class="nav-link text-white font-weight-bold" href="#">Plumber<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white font-weight-bold" href="#">Electrician<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white font-weight-bold" href="#">Painter<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white font-weight-bold" href="#">Carpenter<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white font-weight-bold" href="#">Tiles Layer<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white font-weight-bold" href="#">Mason<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white font-weight-bold" href="#">Potter<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white font-weight-bold" href="#">Wood carver<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white font-weight-bold" href="#">View all categories<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+
+
+  </div>
+
+</nav>
+    <!-- End of header-->
+
+    <!-- Start slider -->
+    <div class="slider-skills">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'listings/images/plumber.jpg' %}" alt="Plumber" width="100%" height="500">
+            <div class="carousel-caption">
+                <h3></h3>
+                <p></p>
+            </div>   
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'listings/images/woodcarver.jpg' %}" alt="Wood carver" width="100%" height="500">
+            <div class="carousel-caption">
+                <h3></h3>
+                <p></p>
+            </div>   
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'listings/images/construction.jpg' %}" alt="Constructor" width="100%" height="500">
+            <div class="carousel-caption">
+                <h3></h3>
+                <p></p>
+            </div>   
+        </div>
+        </div>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+        </div>
+    </div>
+    <!-- End of slider -->
+
+    <!-- Begin skill summary -->
+    <div class="skill-summary container border border-secondary ">
+        <div id="filterbutton">
+          <button type="button" class="btn btn-outline-secondary btn-lg text-black-50"><span><i class="fa fa-filter"></i></span><span style="padding: 1rem;">Filter</span></button>
+        </div>
+        <div id="profiles" class="panel panel-default">
+          <div class="card mb-3 text-left">
+              <div class="card-body">
+                <div class ="container-fluid">
+                <div class="row">
+                    <div class="col-sm-4 text-center">
+                        <img class="img-circle" src="{% static 'listings/images/man.jpg' %}">
+                        <h3 id="name-s">Nii Lartey</h3>
+                    </div>
+                    <div class="col-sm-8">
+                        <h1 id="profession-s">Tiles Layer</h1>
+                        <h4 id="number-s" class="text-secondary">0543 842 488 / 0501 431 357</h4>
+                        <h5 id="comment-s">I have been doing this for a number of years for many <br>people with exceptional experience in the industry I do <br>great with every job I get...</h5>
+                        <span><span id="distance-s" class="font-weight-bold">33mm</span><span class="text-secondary font-weight-bold"> from here </span><button id="direction-s" class="font-weight-bold"> Direction <i class="fa fa-map-marker"></i></button></span>
+                    </div>
+                </div>
+            </div>
+            </div>
+          </div>
+       
+       <div class="card mb-3 text-left">
+              <div class="card-body">
+                <div class ="container-fluid">
+                <div class="row">
+                    <div class="col-sm-4 text-center">
+                        <img class="img-circle" src="{% static 'listings/images/man.jpg' %}">
+                        <h3 id="name-s">Nii Lartey</h3>
+                    </div>
+                    <div class="col-sm-8">
+                        <h1 id="profession-s">Tiles Layer</h1>
+                        <h4 id="number-s" class="text-secondary">0543 842 488 / 0501 431 357</h4>
+                        <h5 id="comment-s">I have been doing this for a number of years for many <br>people with exceptional experience in the industry I do <br>great with every job I get...</h5>
+                        <span><span id="distance-s" class="font-weight-bold">33mm</span><span class="text-secondary font-weight-bold"> from here </span><button id="direction-s" class="font-weight-bold"> Direction <i class="fa fa-map-marker"></i></button></span>
+                    </div>
+                </div>
+            </div>
+            </div>
+          </div>
+
+          <div class="card mb-3 text-left">
+              <div class="card-body">
+                <div class ="container-fluid">
+                <div class="row">
+                    <div class="col-sm-4 text-center">
+                        <img class="img-circle" src="{% static 'listings/images/man.jpg' %}">
+                        <h3 id="name-s">Nii Lartey</h3>
+                    </div>
+                    <div class="col-sm-8">
+                        <h1 id="profession-s">Tiles Layer</h1>
+                        <h4 id="number-s" class="text-secondary">0543 842 488 / 0501 431 357</h4>
+                        <h5 id="comment-s">I have been doing this for a number of years for many <br>people with exceptional experience in the industry I do <br>great with every job I get...</h5>
+                        <span><span id="distance-s" class="font-weight-bold">33mm</span><span class="text-secondary font-weight-bold"> from here </span><button id="direction-s" class="font-weight-bold"> Direction <i class="fa fa-map-marker"></i></button></span>
+                    </div>
+                </div>
+            </div>
+            </div>
+          </div>
+
+          <div class="card mb-3 text-left">
+              <div class="card-body">
+                <div class ="container-fluid">
+                <div class="row">
+                    <div class="col-sm-4 text-center">
+                        <img class="img-circle" src="{% static 'listings/images/man.jpg' %}">
+                        <h3 id="name-s">Nii Lartey</h3>
+                    </div>
+                    <div class="col-sm-8">
+                        <h1 id="profession-s">Tiles Layer</h1>
+                        <h4 id="number-s" class="text-secondary">0543 842 488 / 0501 431 357</h4>
+                        <h5 id="comment-s">I have been doing this for a number of years for many <br>people with exceptional experience in the industry I do <br>great with every job I get...</h5>
+                        <span><span id="distance-s" class="font-weight-bold">33mm</span><span class="text-secondary font-weight-bold"> from here </span><button id="direction-s" class="font-weight-bold"> Direction <i class="fa fa-map-marker"></i></button></span>
+                    </div>
+                </div>
+            </div>
+            </div>
+          </div>
+
+          <div class="card mb-3 text-left">
+              <div class="card-body">
+                <div class ="container-fluid">
+                <div class="row">
+                    <div class="col-sm-4 text-center">
+                        <img class="img-circle" src="{% static 'listings/images/man.jpg' %}">
+                        <h3 id="name-s">Nii Lartey</h3>
+                    </div>
+                    <div class="col-sm-8">
+                        <h1 id="profession-s">Tiles Layer</h1>
+                        <h4 id="number-s" class="text-secondary">0543 842 488 / 0501 431 357</h4>
+                        <h5 id="comment-s">I have been doing this for a number of years for many <br>people with exceptional experience in the industry I do <br>great with every job I get...</h5>
+                        <span><span id="distance-s" class="font-weight-bold">33mm</span><span class="text-secondary font-weight-bold"> from here </span><button id="direction-s" class="font-weight-bold"> Direction <i class="fa fa-map-marker"></i></button></span>
+                    </div>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End summary -->
+
+    <!-- Start footer -->
+     <footer id="myFooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 myCols">
+                    <h5>About Us</h5>
+                </div>
+                <div class="col-sm-3 myCols">
+                    <h5>Terms of Service</h5>
+                </div>
+                <div class="col-sm-3 myCols">
+                    <h5>Community</h5>
+                </div>
+                <div class="col-sm-3 myCols">
+                    <h5>Feedback</h5>
+                </div>
+            </div>
+        </div>
+        <div class="social-networks">
+            <a href="#" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
+            <a href="https://twitter.com/afya_charity" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.facebook.com/jasmin.backman.5" class="facebook"><i class="fa fa-facebook-official"></i></a>
+            <a href="https://plus.google.com/u/0/116744007154550883336" class="google"><i class="fa fa-google-plus"></i></a>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2018 Copyright | <a href="http://www.africanwomenresearchers.org/" target="_blank"> Ara-w fellow </a></p>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- End footer -->
+
+</body>
+</html>
