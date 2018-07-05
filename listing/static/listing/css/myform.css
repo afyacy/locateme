@@ -1,0 +1,43 @@
+.containerl{
+        background: #ffffff;
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        text-align: center;
+        margin-top: 50px;
+        border-radius: 15px;
+      }
+      .input-containerl{
+        display: flex;
+        display: -ms-flexbox;
+        width: 100%;
+        margin-bottom: 15px;
+      }
+      .iconl{
+        padding: 10px;
+        background: #32CD32;
+        color: #fff;
+        min-width: 50px;
+        text-align: center;
+      }
+      .input-fieldl{
+        width: 100%;
+        padding: 10px;
+        outline: none;
+      }
+      .input-fieldl:focus{
+        border: 2px solid #32CD32;
+      }
+      .btn-colors{
+        background: #32CD32;
+        color: #fff;
+        padding: 15px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom: 50px;
+        border-radius: 5px;
+      }
+      .btn-colors:hover{
+        background: #0c7a22;
+      }

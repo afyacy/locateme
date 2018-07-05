@@ -1,0 +1,173 @@
+<html>
+<head>
+  <title>locateme | find skilled people easily</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="{% static 'listing/vendor/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'listing/vendor/bootstrap-4.1.1/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'listing/css/homestyles.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'listing/css/myform.css' %}">
+  <!-- Javascripts -->
+  <script src="{% static 'listing/js/jquery.min.js' %}"></script>
+  <script src="{% static 'listing/js/popper.min.js' %}"></script>
+  <script src="{% static 'listing/vendor/bootstrap-4.1.1/js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+  <!--- Start of header-->
+
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+  <!-- One of the primary actions on mobile is to call a business - This displays a phone button on mobile only -->
+  <a class="navbar-brand" href="index.html"><img src="images/logo.png"></a>
+  <div class="navbar-toggler-right">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+  <div class="collapse navbar-collapse flex-column " id="navbar">
+                <ul class="navbar-nav ml-auto" id="rightnav">
+                    <li> <form class="form-inline" id="cs">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="search for a skill" aria-label="search for a skill" aria-describedby="basic-addon1"><div class="input-group-prepend">
+                        <span class="input-group-text"><button id="search-s"><i class="fa fa-search"></i></button></span>
+                        </div>
+                    </div>
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="#">SIGN UP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="login.html">LOGIN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white bg-success font-weight-bold" href="#">HOW IT WORKS</a>
+                    </li>
+                </ul>
+
+    <ul class="navbar-nav justify-content-center w-100 bg-secondary px-3">
+      <li class="nav-item">
+        <a class="nav-link text-white font-weight-bold" href="#">Plumber<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white font-weight-bold" href="#">Electrician<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white font-weight-bold" href="#">Painter<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white font-weight-bold" href="#">Carpenter<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white font-weight-bold" href="#">Tiles Layer<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white font-weight-bold" href="#">Mason<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white font-weight-bold" href="#">Potter<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white font-weight-bold" href="#">Wood carver<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white font-weight-bold" href="#">View all categories<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+
+
+  </div>
+
+</nav>
+    <!-- End of header-->
+    <div class="containerl shadow p-3 mb-5 bg-white rounded">
+        <form>
+            <h1 class="formtitle font-weight-bold text-secondary">Sign up</h1>
+            <hr>
+            <div class="input-containerl">
+                <i class="fa fa-user iconl"></i>
+                <input type="text" class="input-fieldl" placeholder="firstname">
+            </div>
+            <div class="input-containerl">
+                <i class="fa fa-user-circle iconl"></i>
+                <input type="text" class="input-fieldl" placeholder="lastname">
+            </div>
+            <div class="input-containerl">
+                <i class="fa fa-user iconl"></i>
+                <input type="text" class="input-fieldl" placeholder="username">
+            </div>
+            <div class="input-containerl">
+                <i class="fa fa-wrench iconl"></i>
+                <form action="/action_page.php" >
+                  <select name="skill" class="input-fieldl text-secondary">
+                    <option value="">What do you do?</option>
+                    <option value="">Plumber</option>
+                    <option value="">Painter</option>
+                    <option value="">Carpenter</option>
+                    <option value=" ">Electrician</option>
+                    <option value=" ">Printer</option>
+                    <option value=" ">Carpenter</option>
+                    <option value=" ">Tiles Layer</option>
+                    <option value=" ">Mason</option>
+                    <option value=" ">Potter</option>
+                    <option value=" ">Wood carver</option>
+                    <option value=" "></option>
+                  </select>
+                  <br><br>
+                  <!--<input type="submit">-->
+            </form>
+            </div>
+            <div class="input-containerl">
+                <i class="fa fa-phone-square iconl"></i>
+                <input type="tel" class="input-fieldl" placeholder="number (0543 842 488)">
+            </div>
+            <div class="input-containerl">
+                <i class="fa fa-image iconl"></i>
+                <input type="file" class="input-fieldl text-secondary" placeholder="picture">
+            </div>
+            <div class="input-containerl">
+                <i class="fa fa-map-marker iconl"></i>
+                <input type="text" class="input-fieldl" placeholder="location">
+            </div>
+            <div class="input-containerl">
+                <i class="fa fa-comment iconl"></i>
+                <textarea class="input-fieldl text-secondary" rows="6"> comments ( I have been doing this for a number of
+                    years for many people with exceptional 
+                    experience in the industry I do great with 
+                    every job I get...)"</textarea>
+            </div>
+            <button type="button" class="btn btn-lg btn-block btn-colors">Register</button>
+
+        </form>
+    </div>
+
+    <!-- Start footer -->
+     <footer id="myFooter" style="margin-top: 50px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 myCols">
+                    <h5>About Us</h5>
+                </div>
+                <div class="col-sm-3 myCols">
+                    <h5>Terms of Service</h5>
+                </div>
+                <div class="col-sm-3 myCols">
+                    <h5>Community</h5>
+                </div>
+                <div class="col-sm-3 myCols">
+                    <h5>Feedback</h5>
+                </div>
+            </div>
+        </div>
+        <div class="social-networks">
+            <a href="#" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
+            <a href="https://twitter.com/afya_charity" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.facebook.com/jasmin.backman.5" class="facebook"><i class="fa fa-facebook-official"></i></a>
+            <a href="https://plus.google.com/u/0/116744007154550883336" class="google"><i class="fa fa-google-plus"></i></a>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2018 Copyright | <a href="http://www.africanwomenresearchers.org/" target="_blank"> Ara-w fellow </a></p>
+        </div>
+    </footer>
+</body>
+</html>
